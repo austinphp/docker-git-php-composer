@@ -76,8 +76,13 @@ build:
 	# only build the container. Note, docker does this also if you apply other targets.
 	docker-compose build $(SERVICE_TARGET)
 	docker-compose build 'focal-php7.3-phpunit7.5.8'
+	docker-compose build 'focal-php7.3-phpunit8.5.5'
+	docker-compose build 'focal-php7.4-phpunit7.5.8'
+	docker-compose build 'focal-php7.4-phpunit8.5.5'
+	docker-compose build 'focal-php7.4-phpunit9.2.1'
 	docker-compose build 'xenial-php7.3-phpunit7.5.8'
-
+	docker-compose build 'xenial-php7.4-phpunit8.5.5'
+	docker-compose build 'xenial-php7.4-phpunit9.2.1'
 
 clean:
 	# remove created images

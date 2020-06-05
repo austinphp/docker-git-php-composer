@@ -4,7 +4,46 @@ services:
     container_name: ${PROJECT_NAME}
     hostname: ${PROJECT_NAME}
     # environment:
-    image: ${PROJECT_NAME}:latest
+    image: austinphp/${PROJECT_NAME}:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+      # These variables are passed to Dockerfile.
+      args:
+        - UBUNTU_VERSION=20.04
+        - PHP_VERSION=7.4
+        - PHP_UNIT_VERSION=9
+  focal-php7.3-phpunit7.5.8:
+    container_name: ${PROJECT_NAME}
+    hostname: ${PROJECT_NAME}
+    # environment:
+    image: austinphp/${PROJECT_NAME}:focal-php7.3-phpunit7.5.8
+    build:
+      context: .
+      dockerfile: Dockerfile
+      # These variables are passed to Dockerfile.
+      args:
+        - UBUNTU_VERSION=20.04
+        - PHP_VERSION=7.3
+        - PHP_UNIT_VERSION=7.5.8
+  focal-php7.3-phpunit8.5.5:
+    container_name: ${PROJECT_NAME}
+    hostname: ${PROJECT_NAME}
+    # environment:
+    image: austinphp/${PROJECT_NAME}:focal-php7.3-phpunit8.5.5
+    build:
+      context: .
+      dockerfile: Dockerfile
+      # These variables are passed to Dockerfile.
+      args:
+        - UBUNTU_VERSION=20.04
+        - PHP_VERSION=7.3
+        - PHP_UNIT_VERSION=8.5.5
+  focal-php7.4-phpunit7.5.8:
+    container_name: ${PROJECT_NAME}
+    hostname: ${PROJECT_NAME}
+    # environment:
+    image: austinphp/${PROJECT_NAME}:focal-php7.4-phpunit7.5.8
     build:
       context: .
       dockerfile: Dockerfile
@@ -13,24 +52,37 @@ services:
         - UBUNTU_VERSION=20.04
         - PHP_VERSION=7.4
         - PHP_UNIT_VERSION=7.5.8
-  focal-php7.3-phpunit7.5.8:
+  focal-php7.4-phpunit8.5.5:
     container_name: ${PROJECT_NAME}
     hostname: ${PROJECT_NAME}
     # environment:
-    image: ${PROJECT_NAME}:focal-php7.3-phpunit7.5.8
+    image: austinphp/${PROJECT_NAME}:focal-php7.4-phpunit8.5.5
     build:
       context: .
       dockerfile: Dockerfile
       # These variables are passed to Dockerfile.
       args:
         - UBUNTU_VERSION=20.04
-        - PHP_VERSION=7.3
-        - PHP_UNIT_VERSION=7.5.8
+        - PHP_VERSION=7.4
+        - PHP_UNIT_VERSION=8.5.5
+  focal-php7.4-phpunit9.2.1:
+    container_name: ${PROJECT_NAME}
+    hostname: ${PROJECT_NAME}
+    # environment:
+    image: austinphp/${PROJECT_NAME}:focal-php7.4-phpunit9.2.1
+    build:
+      context: .
+      dockerfile: Dockerfile
+      # These variables are passed to Dockerfile.
+      args:
+        - UBUNTU_VERSION=20.04
+        - PHP_VERSION=7.4
+        - PHP_UNIT_VERSION=9.2.1
   xenial-php7.3-phpunit7.5.8:
     container_name: ${PROJECT_NAME}
     hostname: ${PROJECT_NAME}
     # environment:
-    image: ${PROJECT_NAME}:xenial-php7.3-phpunit7.5.8
+    image: austinphp/${PROJECT_NAME}:xenial-php7.3-phpunit7.5.8
     build:
       context: .
       dockerfile: xenial/Dockerfile
@@ -39,4 +91,29 @@ services:
         - UBUNTU_VERSION=18.04
         - PHP_VERSION=7.3
         - PHP_UNIT_VERSION=7.5.8
-
+  xenial-php7.4-phpunit8.5.5:
+    container_name: ${PROJECT_NAME}
+    hostname: ${PROJECT_NAME}
+    # environment:
+    image: austinphp/${PROJECT_NAME}:xenial-php7.4-phpunit8.5.5
+    build:
+      context: .
+      dockerfile: xenial/Dockerfile
+      # These variables are passed to Dockerfile.
+      args:
+        - UBUNTU_VERSION=18.04
+        - PHP_VERSION=7.4
+        - PHP_UNIT_VERSION=8.5.5
+  xenial-php7.4-phpunit9.2.1:
+    container_name: ${PROJECT_NAME}
+    hostname: ${PROJECT_NAME}
+    # environment:
+    image: austinphp/${PROJECT_NAME}:xenial-php7.4-phpunit9.2.1
+    build:
+      context: .
+      dockerfile: xenial/Dockerfile
+      # These variables are passed to Dockerfile.
+      args:
+        - UBUNTU_VERSION=18.04
+        - PHP_VERSION=7.4
+        - PHP_UNIT_VERSION=9.2.1
