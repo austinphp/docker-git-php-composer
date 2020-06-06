@@ -99,3 +99,14 @@ test:
 	docker-compose -p $(PROJECT_NAME) run --rm $(SERVICE_TARGET) sh -c '\
 		echo "I am `whoami`. My uid is `id -u`." && echo "Docker runs!"' \
 	&& echo success
+
+push:
+	docker push austinphp/docker-git-php-composer:latest
+	docker push austinphp/docker-git-php-composer:focal-php7.3-phpunit7.5.8
+	docker push austinphp/docker-git-php-composer:focal-php7.3-phpunit8.5.5
+	docker push austinphp/docker-git-php-composer:focal-php7.4-phpunit7.5.8
+	docker push austinphp/docker-git-php-composer:focal-php7.4-phpunit8.5.5
+	docker push austinphp/docker-git-php-composer:focal-php7.4-phpunit9.2.1
+	docker push austinphp/docker-git-php-composer:xenial-php7.3-phpunit7.5.8
+	docker push austinphp/docker-git-php-composer:xenial-php7.4-phpunit8.5.5
+	docker push austinphp/docker-git-php-composer:xenial-php7.4-phpunit9.2.1
