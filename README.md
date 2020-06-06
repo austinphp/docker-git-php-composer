@@ -31,7 +31,7 @@ docker buildx build -t docker-git-php-composer:custom \
 
 ## Other than git, php and composer it contains:
 
-- phpunit
+- [phpunit](https://github.com/sebastianbergmann/phpunit/)
 - Laravel Dusk support
 - node
 - yarn
@@ -47,7 +47,11 @@ A different Dockerfile is included for Xenial becaue of chromium support in Foca
 You can find the list of tags below. 
 
 - latest
-- focal-php7.3-phpunit7.5.8
-- xenial-php7.3-phpunit7.5.8
-
-
+- 'focal-php7.3-phpunit7.5.8'
+- 'focal-php7.3-phpunit8.5.5'
+- 'focal-php7.4-phpunit7.5.8'
+- 'focal-php7.4-phpunit8.5.5'
+- 'focal-php7.4-phpunit9.2.1'
+- 'xenial-php7.3-phpunit7.5.8'
+- 'xenial-php7.4-phpunit8.5.5'
+- 'xenial-php7.4-phpunit9.2.1'
