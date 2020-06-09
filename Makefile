@@ -80,6 +80,9 @@ build:
 	docker-compose build 'focal-php7.4-phpunit7.5.8'
 	docker-compose build 'focal-php7.4-phpunit8.5.5'
 	docker-compose build 'focal-php7.4-phpunit9.2.1'
+	docker-compose build 'bionic-php7.3-phpunit7.5.8'
+	docker-compose build 'bionic-php7.4-phpunit8.5.5'
+	docker-compose build 'bionic-php7.4-phpunit9.2.1'
 	docker-compose build 'xenial-php7.3-phpunit7.5.8'
 	docker-compose build 'xenial-php7.4-phpunit8.5.5'
 	docker-compose build 'xenial-php7.4-phpunit9.2.1'
@@ -107,6 +110,9 @@ push:
 	docker push austinphp/docker-git-php-composer:focal-php7.4-phpunit7.5.8
 	docker push austinphp/docker-git-php-composer:focal-php7.4-phpunit8.5.5
 	docker push austinphp/docker-git-php-composer:focal-php7.4-phpunit9.2.1
+	docker push austinphp/docker-git-php-composer:bionic-php7.3-phpunit7.5.8
+	docker push austinphp/docker-git-php-composer:bionic-php7.4-phpunit8.5.5
+	docker push austinphp/docker-git-php-composer:bionic-php7.4-phpunit9.2.1
 	docker push austinphp/docker-git-php-composer:xenial-php7.3-phpunit7.5.8
 	docker push austinphp/docker-git-php-composer:xenial-php7.4-phpunit8.5.5
 	docker push austinphp/docker-git-php-composer:xenial-php7.4-phpunit9.2.1
