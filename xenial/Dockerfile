@@ -29,7 +29,7 @@ ENV LC_ALL en_US.UTF-8
 
 ## Install basic things
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    gpg-agent \
+    gnupg-agent \
     libpng-dev \
     apt-utils \
     apt-transport-https \
