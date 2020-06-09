@@ -78,6 +78,45 @@ services:
         - UBUNTU_VERSION=20.04
         - PHP_VERSION=7.4
         - PHP_UNIT_VERSION=9.2.1
+  bionic-php7.3-phpunit7.5.8:
+    container_name: ${PROJECT_NAME}
+    hostname: ${PROJECT_NAME}
+    # environment:
+    image: austinphp/${PROJECT_NAME}:bionic-php7.3-phpunit7.5.8
+    build:
+      context: .
+      dockerfile: bionic/Dockerfile
+      # These variables are passed to Dockerfile.
+      args:
+        - UBUNTU_VERSION=18.04
+        - PHP_VERSION=7.3
+        - PHP_UNIT_VERSION=7.5.8
+  bionic-php7.4-phpunit8.5.5:
+    container_name: ${PROJECT_NAME}
+    hostname: ${PROJECT_NAME}
+    # environment:
+    image: austinphp/${PROJECT_NAME}:bionic-php7.4-phpunit8.5.5
+    build:
+      context: .
+      dockerfile: bionic/Dockerfile
+      # These variables are passed to Dockerfile.
+      args:
+        - UBUNTU_VERSION=18.04
+        - PHP_VERSION=7.4
+        - PHP_UNIT_VERSION=8.5.5
+  bionic-php7.4-phpunit9.2.1:
+    container_name: ${PROJECT_NAME}
+    hostname: ${PROJECT_NAME}
+    # environment:
+    image: austinphp/${PROJECT_NAME}:bionic-php7.4-phpunit9.2.1
+    build:
+      context: .
+      dockerfile: bionic/Dockerfile
+      # These variables are passed to Dockerfile.
+      args:
+        - UBUNTU_VERSION=18.04
+        - PHP_VERSION=7.4
+        - PHP_UNIT_VERSION=9.2.1
   xenial-php7.3-phpunit7.5.8:
     container_name: ${PROJECT_NAME}
     hostname: ${PROJECT_NAME}
@@ -88,7 +127,7 @@ services:
       dockerfile: xenial/Dockerfile
       # These variables are passed to Dockerfile.
       args:
-        - UBUNTU_VERSION=18.04
+        - UBUNTU_VERSION=16.04
         - PHP_VERSION=7.3
         - PHP_UNIT_VERSION=7.5.8
   xenial-php7.4-phpunit8.5.5:
@@ -101,7 +140,7 @@ services:
       dockerfile: xenial/Dockerfile
       # These variables are passed to Dockerfile.
       args:
-        - UBUNTU_VERSION=18.04
+        - UBUNTU_VERSION=16.04
         - PHP_VERSION=7.4
         - PHP_UNIT_VERSION=8.5.5
   xenial-php7.4-phpunit9.2.1:
@@ -114,6 +153,6 @@ services:
       dockerfile: xenial/Dockerfile
       # These variables are passed to Dockerfile.
       args:
-        - UBUNTU_VERSION=18.04
+        - UBUNTU_VERSION=16.04
         - PHP_VERSION=7.4
         - PHP_UNIT_VERSION=9.2.1
