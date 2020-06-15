@@ -41,7 +41,7 @@ docker buildx build -t docker-git-php-composer:custom \
 - deployer
 
 
-A different Dockerfile is included for Xenial becaue of chromium support in Focal has changed. You can no longer install the "chromium-browser" package using apt-get, so we use an alternative approach and install chromium binaries via composer. 
+A different Dockerfile is included for Bionic and Xenial because of chromium support in Focal has changed. You can no longer install the "chromium-browser" package using apt-get, so we use an alternative approach and install chromium binaries via composer. 
 
 
 You can find the list of tags below. 
